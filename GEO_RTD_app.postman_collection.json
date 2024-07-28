@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "09733a8d-44d1-452f-9fb4-9b50472d8f24",
+		"name": "GEO_RTD_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29508073",
+		"_collection_link": "https://speeding-resonance-716623.postman.co/workspace/API_AUTOMATION_2025~f1cf5e56-60ec-45af-9dfd-a09579f084fe/collection/29508073-09733a8d-44d1-452f-9fb4-9b50472d8f24?action=share&source=collection_link&creator=29508073"
+	},
+	"item": [
+		{
+			"name": "API_01_Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userName\":\"510597\",\"password\":\"password\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Env_geortd}}/GeoRTD/login/post/authentication",
+					"host": [
+						"{{Env_geortd}}"
+					],
+					"path": [
+						"GeoRTD",
+						"login",
+						"post",
+						"authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_02_UserMenuMapping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":68630}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Env_geortd}}/GeoRTD/master/post/getUserMenuMapping",
+					"host": [
+						"{{Env_geortd}}"
+					],
+					"path": [
+						"GeoRTD",
+						"master",
+						"post",
+						"getUserMenuMapping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_03_TollMasterData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":68630,\"accountId\":138}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Env_geortd}}/GeoRTD/master/post/getTollMasterData",
+					"host": [
+						"{{Env_geortd}}"
+					],
+					"path": [
+						"GeoRTD",
+						"master",
+						"post",
+						"getTollMasterData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_04_DashboardTabMapping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":68630,\"accountId\":138,\"roleId\":52}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Env_geortd}}/GeoRTD/master/post/getDashboardTabMapping",
+					"host": [
+						"{{Env_geortd}}"
+					],
+					"path": [
+						"GeoRTD",
+						"master",
+						"post",
+						"getDashboardTabMapping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_05_getDashboardCount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":68630,\"accountId\":138}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Env_geortd}}/GeoRTD/dashboard/post/getDashboardCount",
+					"host": [
+						"{{Env_geortd}}"
+					],
+					"path": [
+						"GeoRTD",
+						"dashboard",
+						"post",
+						"getDashboardCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_06_getUserGenericData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\":\"\",\"by\":\"itemName\",\"exact\":false,\"listOfParam\":[\"id\",\"itemName\"],\"numberOfRecords\":-1,\"accountId\":138,\"userId\":68630,\"type\":\"destinationCluster\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Env_geortd}}/GeoRTD/master/post/getUserGenericData",
+					"host": [
+						"{{Env_geortd}}"
+					],
+					"path": [
+						"GeoRTD",
+						"master",
+						"post",
+						"getUserGenericData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
